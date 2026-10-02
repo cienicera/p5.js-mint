@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>p5.js Mint - Multiple SVG Export</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="https://unpkg.com/p5.js-svg@1.5.1/dist/p5.svg.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>p5.js Mint</h1>
+    <div id="controls">
+      <button id="captureBtn">Capture Current SVG</button>
+      <button id="captureAutoBtn">Auto Capture Every 60f</button>
+      <button id="exportSelectedBtn">Export Selected</button>
+      <button id="exportAllBtn">Export All as ZIP</button>
+      <input id="baseName" type="text" placeholder="base_name" value="sketch" />
+    </div>
+  </header>
+  <main>
+    <div id="canvas-container"></div>
+    <aside id="gallery">
+      <h2>SVG Gallery <span id="count">0</span></h2>
+      <div id="galleryGrid"></div>
+    </aside>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+</html>
