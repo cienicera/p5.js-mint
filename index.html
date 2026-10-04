@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Series Preview</title>
+    <style>
+        .preview-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .controls {
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .svg-preview {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+        input[type="number"] {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <h2>SVG Series Preview</h2>
+        <div class="controls">
+            <button id="prev-btn">Previous</button>
+            <label for="frame-input">Frame:</label>
+            <input type="number" id="frame-input" min="0" value="0">
+            <label for="size-input">Series Size:</label>
+            <input type="number" id="size-input" min="1" value="5">
+            <button id="next-btn">Next</button>
+        </div>
+        <div class="svg-preview" id="svg-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
