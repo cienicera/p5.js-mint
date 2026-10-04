@@ -1,0 +1,41 @@
+.transaction-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 350px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+
+.transaction-progress {
+  margin-top: 8px;
+}
+
+.transaction-hash {
+  margin-top: 8px;
+  font-size: 12px;
+  word-break: break-all;
+  color: #666;
+}
+
+.transaction-error {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #f5222d;
+}
+
+.transaction-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .transaction-status {
+    width: 90%;
+    right: 5%;
+  }
+}
