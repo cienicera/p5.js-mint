@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
-  const [state, dispatch] = useReducer(filesReducer, [], initialState);
+  const [state, dispatch] = useReducer(filesReducer, initialState);
   const [isPlaying, setIsPlaying] = useState(false);
   const [basePath, setBasePath] = useState('');
   const [textOutput, setTextOutput] = useState(false);
