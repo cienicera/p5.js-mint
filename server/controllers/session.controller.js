@@ -31,6 +31,11 @@ export function getSession(req, res) {
     return res.status(403).send({ message: 'Forbidden: User is banned.' });
   }
 
+  // Clear image cache on each session access to ensure fresh sketches
+  if (req.session) {
+    delete req.session.imagesCache;
+  }
+
   return res.json(userResponse(req.user));
 }
 
@@ -49,3 +54,11 @@ export function destroySession(req, res, next) {
     });
   });
 }
+
+// New helper to explicitly clear image cache if needed
+export function clearCache(req, res, next) {
+  if (req.session) {
+    delete req.session.imagesCache;
+  }
+  res.json({ success: true });
+}
